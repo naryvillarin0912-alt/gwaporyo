@@ -19,6 +19,16 @@ body {
   padding: 20px;
 }
 
+#active-btn {
+  color: #f179ab;
+  text-shadow: 
+  0 0 5px #f179ab, 
+  0 0 10px #f179ab, 
+  0 0 20px #f179ab,
+  0 0 40px #f179ab, 
+  0 0 80px #f179ab;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -40,15 +50,24 @@ body {
   font-size: 2.5rem;
 }
 
-ul {
+.navbar ul {
   list-style: none;
   display: flex;
   justify-content: end;
   gap: 40px;
 }
 
-li {
-  padding-inline: 10px;
+.text-section ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+.text-section ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
 }
 
 a {
@@ -87,26 +106,30 @@ a:hover {
 
 .text-section {
   grid-column: 6/ 11;
-  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.text-section h2 {
-  font-size: 5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+.text-section li {  
+  font-size: 4vh;
 }
 
-.text-section p {
-  font-size: 3rem;
-  color: white;
-  line-height: 1.4;
+.text-section ul {  
+  gap: 1vh;
+}
+
+.text-section h1 {  
+  font-size: 5vh;
+}
+
+.text-section img {
+  height: 12vh;
+  width: 12vh;
 }
 
 .menu-bar {
-    display: none !important;
+  display: none !important;
 }
 
 @media (max-width: 1700px) {
@@ -164,6 +187,15 @@ ul {
     font-size: 3rem;
     line-height: 1.4;
   }
+
+  .text-section img {
+    height: 10vh;
+    width: 10vh;
+  }
+
+  .text-section ul {
+    gap:1vh;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -211,15 +243,21 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
+  .text-section li {  
+    font-size: 3.5vh;
   }
 
-  .text-section p {
-        text-align: justify;
-    font-size: 2.5rem;
-    line-height: 1.4;
+  .text-section h1 {  
+    font-size: 4vh;
+  }
+
+  .text-section ul {
+    gap:1vh;
+  }
+
+  .text-section img {
+    height: 8vh;
+    width: 8vh;
   }
 }
 
@@ -239,7 +277,7 @@ ul {
     text-align: center;
   }
 
-ul {
+.navbar ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -279,15 +317,21 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+.text-section li {  
+  font-size: 3vh;
+}
+
+.text-section h1 {  
+  font-size: 3.5vh;
+}
+
+.text-section ul {
+    gap:1vh;
   }
 
-  .text-section p {
-        text-align: justify;
-    font-size: 2rem;
-    line-height: 1.4;
+.text-section img {
+    height: 6vh;
+    width: 6vh;
   }
 }
 
@@ -320,10 +364,6 @@ ul {
     display: none;
   }
 
-  .navbar li {
-    display: flex;
-  }
-
   .image-section {
     grid-column: 1 / 11;
     display: flex;
@@ -347,15 +387,21 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.text-section li {  
+  font-size: 2vh;
+}
+
+.text-section h1 {  
+  font-size: 2.3vh;
+}
+
+.text-section ul {
+    gap:1vh;
   }
 
-  .text-section p {
-    text-align: justify;
-    font-size: 1.7rem;
-    line-height: 1.4;
+.text-section img {
+    height: 4vh;
+    width: 4vh;
   }
 
   .navbar ul.show {
@@ -369,7 +415,8 @@ ul {
     padding: 10px 20px;
     border-radius: 10px;
     z-index: 100;
-  }
+}
+
 }
 
 @media (max-width: 400px) {
@@ -397,7 +444,7 @@ ul {
     font-size: 1.5vh;
   }
 
-  li {
+  .navbar ul {
     display: none;
   }
 
@@ -424,15 +471,21 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+.text-section li {  
+  font-size: 1.3vh;
+}
+
+.text-section h1 {  
+  font-size: 1.5vh;
+}
+
+.text-section ul {
+    gap:1vh;
   }
 
-  .text-section p {
-    text-align: justify;
-    font-size: 1.1rem;
-    line-height: 1.4;
+.text-section img {
+    height: 3vh;
+    width: 3vh;
   }
 }
 
@@ -462,7 +515,7 @@ ul {
     font-size: 1vh;
   }
 
-  li {
+  .navbar ul {
     display: none;
   }
 
@@ -494,9 +547,12 @@ ul {
     margin-bottom: 0.5rem;
   }
 
-  .text-section p {
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.4;
+  .text-section ul {
+    gap:1vh;
+  }
+
+  .text-section img {
+    height: 2vh;
+    width: 2vh;
   }
 }

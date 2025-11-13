@@ -19,6 +19,16 @@ body {
   padding: 20px;
 }
 
+#active-btn {
+  color: #f179ab;
+  text-shadow: 
+  0 0 5px #f179ab, 
+  0 0 10px #f179ab, 
+  0 0 20px #f179ab,
+  0 0 40px #f179ab, 
+  0 0 80px #f179ab;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -47,8 +57,18 @@ ul {
   gap: 40px;
 }
 
-li {
-  padding-inline: 10px;
+.text-section ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 40px;
+}
+
+.text-section ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
 }
 
 a {
@@ -93,20 +113,17 @@ a:hover {
   justify-content: center;
 }
 
-.text-section h2 {
-  font-size: 5rem;
-  font-weight: bold;
-  margin-bottom: 20px;
+.text-section li {  
+  font-size: 4vh;
+  padding-inline: 10px;
 }
 
-.text-section p {
-  font-size: 3rem;
-  color: white;
-  line-height: 1.4;
+.text-section h1 {  
+  font-size: 5vh;
 }
 
 .menu-bar {
-    display: none !important;
+  display: none !important;
 }
 
 @media (max-width: 1700px) {
@@ -211,16 +228,13 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 4rem;
-    margin-bottom: 0.5rem;
-  }
+.text-section li {  
+  font-size: 3.5vh;
+}
 
-  .text-section p {
-        text-align: justify;
-    font-size: 2.5rem;
-    line-height: 1.4;
-  }
+.text-section h1 {  
+  font-size: 4vh;
+}
 }
 
 @media (max-width: 1000px) {
@@ -279,16 +293,14 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
+.text-section li {  
+  font-size: 3vh;
+}
 
-  .text-section p {
-        text-align: justify;
-    font-size: 2rem;
-    line-height: 1.4;
-  }
+.text-section h1 {  
+  font-size: 3.5vh;
+}
+
 }
 
 @media (max-width: 800px) {
@@ -320,10 +332,6 @@ ul {
     display: none;
   }
 
-  .navbar li {
-    display: flex;
-  }
-
   .image-section {
     grid-column: 1 / 11;
     display: flex;
@@ -347,16 +355,13 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
+.text-section li {  
+  font-size: 2vh;
+}
 
-  .text-section p {
-    text-align: justify;
-    font-size: 1.7rem;
-    line-height: 1.4;
-  }
+.text-section h1 {  
+  font-size: 2.3vh;
+}
 
   .navbar ul.show {
     display: flex !important;
@@ -369,7 +374,8 @@ ul {
     padding: 10px 20px;
     border-radius: 10px;
     z-index: 100;
-  }
+}
+
 }
 
 @media (max-width: 400px) {
@@ -397,7 +403,7 @@ ul {
     font-size: 1.5vh;
   }
 
-  li {
+  .navbar ul {
     display: none;
   }
 
@@ -424,16 +430,13 @@ ul {
     padding: 0 10px;
   }
 
-  .text-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-  }
+.text-section li {  
+  font-size: 1.3vh;
+}
 
-  .text-section p {
-    text-align: justify;
-    font-size: 1.1rem;
-    line-height: 1.4;
-  }
+.text-section h1 {  
+  font-size: 1.5vh;
+}
 }
 
 
@@ -462,7 +465,7 @@ ul {
     font-size: 1vh;
   }
 
-  li {
+  .navbar ul {
     display: none;
   }
 
